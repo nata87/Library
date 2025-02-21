@@ -1,28 +1,18 @@
-# Stage 1: Build
-FROM golang:1.19 AS builder
+FROM golang:1.19
 
 WORKDIR /app
 
-# Copia i file di go.mod e go.sum e scarica le dipendenze
+# Copia i file di go.mod e go.sum
 COPY go.mod go.sum ./
+
+# Scarica le dipendenze
 RUN go mod download
 
-# Copia tutto il codice sorgente
+# Copia il codice sorgente
 COPY . .
 
-# Compila l’applicazione; se il file main.go si trova in "cmd", specifica il percorso corretto
-RUN CGO_ENABLED=0 GOOS=linux go build -o app ./cmd/main.go
+# Costruisci l'applicazione
+RUN go build -o app .
 
-# Stage 2: Immagine finale
-FROM alpine:latest
-RUN apk --no-cache add ca-certificates
-
-WORKDIR /root/
-# Copia il file binario compilato dal builder
-COPY --from=builder /app/app .
-
-# Espone la porta su cui l’app è in ascolto (in questo caso 8080)
-EXPOSE 8080
-
-# Comando di avvio
+# Esegui l'applicazione
 CMD ["./app"]
