@@ -1,0 +1,393 @@
+.logo {
+    display: block;
+    margin: 5px auto; 
+    width: 180px;
+    height: 180px;
+    background-image: url('../images/allyoucanread logo.png');
+    background-size: contain;
+    /* Assicura che l'immagine si adatti */
+    background-repeat: no-repeat;
+    background-position: center;
+  
+}
+
+/* per mettere lo sfondo opacizzato dietro a ogni pagina */
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background-01-01.jpg') center/cover no-repeat;
+    opacity: 0.1; /* Cambia l'opacità solo per l'immagine di sfondo */
+    z-index: -1; /* Mette lo sfondo dietro al contenuto */
+}
+ 
+/*body*/
+body {
+    background-color: #fff;
+    text-align: center;
+    font-size: 30px; 
+    
+}
+
+.blue {
+    color: #164059;
+}
+
+h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+form {
+    text-align: center;
+    font-size: 20px;
+}
+
+input {
+    border: 1px solid #164059;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.classinput {
+    font-size: 15px;
+    padding: 10px;   
+    height: 15px;  
+    width: 15%;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border-color: #164059;
+    margin-bottom: 7px;
+  }
+
+.interruttore {
+    color: #164059;
+    font-size: 20px;
+    
+}
+
+.a {
+    font-size: 10px;
+}
+
+/* Header */
+* {
+    margin:0;
+    padding:0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+   
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    background-color: #164059;
+}
+
+#navbar .container ul{
+    display: flex;
+    margin-top: 0px;
+    
+}
+
+#navbar .container li{
+    list-style: none;
+    margin-left: 10px;
+    padding: 12px;
+    font-size: 25px;
+    margin-top: 0px;
+   
+}
+
+#navbar .container li:hover {
+    background-color: #374e5c;
+    
+}
+
+/* Section */
+section {
+    padding: 40px;
+
+}
+
+.marginbottom {
+margin-bottom: 10px;
+}
+
+
+#showcase .container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/back-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* footer */
+footer {
+    background-color: #164059; 
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+  }
+  .footer-section h3,
+  .footer-section p {
+    margin: 0;
+  }
+  
+  .footer-section.social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  .footer-section.social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-section.social,
+  .footer-section.contatti {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer,
+  footer .footer-container {
+    padding: 0;
+  }
+
+
+/* Search container */
+.search-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Search button*/
+button {
+    padding: 5px;
+    font-size: 15px;
+}
+/* bookcatalog */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.prodotto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#search {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 30%;
+}
+
+/* Search */
+.search-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#catalogo {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+#messaggioerrore {
+    color: red;
+    font-size: 20px;
+    }
+    
+#messaggiosuccesso {
+    color: green;
+    font-size: 20px;
+    }
+
+#Messaggioamministratore {
+    color: green;
+    font-size: 20px;
+}
+
+#messaggio {
+    color: green;
+    font-size: 20px;
+}
+/* Style per le tabelle del catalogo */
+
+#catalogo {
+    display: flex;
+    flex-direction: column; /* Allinea i libri verticalmente (una riga sotto l'altra) */
+    gap: 5px; /* Distanza tra le righe */
+    justify-content: flex-start; /* Inizia ad allineare i libri dall'alto */
+}
+
+.prodotto {
+    display: flex;
+    justify-content: space-between; /* Distribuisce i dati orizzontalmente */
+    padding: 15px;
+    border: 1px solid #164059;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%; /* Ogni "prodotto" occupa tutta la larghezza disponibile */
+    box-sizing: border-box; /* Per evitare che padding o border influiscano sulla larghezza */
+}
+
+.prodotto p {
+    margin: 0 10px 0 0; /* Distanza tra le etichette */
+    font-size: 25px;
+}
+
+.prodotto p:last-child {
+    margin-right: 0; /* Rimuove la distanza nell'ultimo elemento */
+}
+
+.prodotto button {
+    background-color: #164059;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px; /* testo del bottone */
+}
+
+.prodotto button:hover {
+    background-color: #45a049;
+}
+
+.prodotto #messaggioerrore,
+.prodotto #messaggiosuccesso {
+    font-size: px;
+    margin-top: 10px;
+}
+
+
+
+/* user dashboard */
+.buttonSearchUser {
+    padding: 10px;
+    margin: 0;
+    font-size: 25px;
+    background-color: #164059;
+}
+
+#pSearchUser {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+/* tabella user - admin dashboard */
+
+.white {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center; /* Centra il testo in tutta la tabella */
+    background-color: rgb(246, 246, 246);
+}
+
+thead tr:hover {
+    background-color: #164059;
+    color: #fff;
+}
+
+th, td {
+    border: 3px solid #164059;
+    padding: 8px;
+    margin-bottom: 5px;
+    text-align: center; /* Centra il testo nelle celle */
+    vertical-align: middle; /* Centra verticalmente il contenuto */
+    white-space: nowrap; /* Impedisce il ritorno a capo */
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostra "..." se il testo è troppo lungo */
+    max-width: 150px; /* Puoi modificare la larghezza massima */
+}
+
+
+th {
+    background-color: #164059;
+    font-weight: bold;
+}
+
+
+td input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #164059;
+    border: none; /* Rimuove completamente il bordo */
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+}
+
+tr:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+thead tr {
+    color: white;
+}
+
+table tr th {
+    color: white;
+}

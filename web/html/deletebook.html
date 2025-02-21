@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav id="navbar">
+        <div class="container">
+            <h1><a href="index.html">AllYouCanRead</a></h1>
+            <ul>
+                <li><a href="admindashboard.html">Home</a></li>
+                <li><a href="usersadmin.html">Users</a></li>
+                <li><a href="createbook.html">Create</a></li>
+                <li><a href="allbooksadmin.html">Read</a></li>
+                <li><a href="updatebook.html">Update</a></li>
+                <li><a href="deletebook.html">Delete</a></li>
+                <li><a href="areaprivata.html">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--Section-->
+    <section>
+
+        <h2 class="blue">Delete a book</h2>
+        <div class="marginbottom"></div>
+
+        <form action="/action_page.php" method="POST" id="deletebook">
+    
+            <label class="blue" for="isbn">ISBN</label><br>
+            <input class="classinput" type="text" id="isbn" name="isbn" required><br>
+
+            <input type="submit" value="Delete"> <!--Bottone-->
+
+        </form> 
+    </section>
+
+    <div id="messaggioerrore"></div>
+<div id="messaggiosuccesso"></div>
+
+
+        <!--collegamento a js-->
+        <script type="text/javascript" src="../js/deletebook.js"></script>
+</body>
+
+</html>

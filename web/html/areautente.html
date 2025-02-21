@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <!--Navbar-->
+        <nav id="navbar">
+            <div class="container">
+                <h1><a href="index.html">AllYouCanRead</a></h1>
+                <ul>
+                    <li><a href="areautente.html">User</a></li>
+                    <li><a href="areaprivata.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--Logo-->
+    <div>
+        <p class="logo"></p>
+    </div>
+
+
+    <!--Registration-->
+    <div id="registrationContainer" , style="display: none;"> <!--Registration è inizialmente nascosto-->
+        <form action="/action_page.php" method="POST" id="formRegistration">
+
+            <label class="blue" for="usernameReg">Name</label><br>
+            <input class="classinput" type="text" id="usernameReg" name="username" required><br>
+
+            <label class="blue" for="surnameReg">Surname</label><br>
+            <input class="classinput" type="text" id="surnameReg" name="surnameReg" required><br>
+
+            <label class="blue" for="emailReg">Email</label><br>
+            <input class="classinput" type="text" id="emailReg" name="emailReg" required><br>
+
+            <label class="blue" for="passwordReg">Password</label><br>
+            <input class="classinput" type="password" id="passwordReg" name="password" required><br>
+
+            <label class="blue" for="confirmPassword">Confirm Password</label><br>
+            <input class="classinput" type="password" id="confirmPassword" name="password" required><br>
+
+
+            <input type="submit" id="registrationstyle" value="Registration"> <!--Bottone-->
+
+      </form>
+
+            <!--Interruttori -->
+            <p> <a class="interruttore" href="#" id="showLogin">Already have an account? Log in</a> </p>
+        
+    </div>
+
+    <!--Login-->
+    <div id="loginContainer">
+        <form action="/action_page.php" method="POST" id="formLogin">
+
+            <label class="blue" for="email">Email</label><br>
+            <input class="classinput" type="text" id="email" name="email" required><br>
+
+            <label class="blue" for="password">Password</label><br>
+            <input class="classinput" type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Login"> <!--Bottone-->
+        </form>
+
+        <!--Interruttori -->
+        <p> <a class="interruttore" href="#" id="showRegistration">Create a new account</a> </p>
+    
+    </div>
+
+
+    <div id="messaggioerrore"></div>
+    <div id="messaggiosuccesso"></div>
+
+    
+    
+    <!--collegamento a js-->
+    <script type="text/javascript" src="../js/user.js"></script>
+</body>
+
+</html>
