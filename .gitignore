@@ -14,7 +14,7 @@
 /vendor/
 
 # Ignore Go modules (only go.sum, go.mod should be kept)
-go.sum
+#go.sum
 
 # Ignore logs and temporary files
 *.log
